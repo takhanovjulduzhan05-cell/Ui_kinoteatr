@@ -1,0 +1,18 @@
+@startuml
+class Main
+class HomeTheaterFacade {
++watchMovie(movie: String)
++endMovie()
++setVolume(volume: int)
++isPlaying(): boolean
+}
+class Projector
+class SoundSystem
+class Lights
+class VideoPlayer
+Main --> HomeTheaterFacade
+HomeTheaterFacade *-- Projector
+HomeTheaterFacade *-- SoundSystem
+HomeTheaterFacade *-- Lights
+HomeTheaterFacade *-- VideoPlayer
+@enduml
